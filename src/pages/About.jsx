@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from '/logo.jpg';
+// REMOVE THIS LINE: import logo from '/logo.jpg';
 
 export default function About() {
   return (
     <div className="about-page">
       {/* Header Section */}
       <section className="about-header">
-        <h1 className="about-title">⋆. About Kiko's Studio ˚⋆</h1>
+        <h1 className="about-title">✿ About Kiko's Studio ✿</h1>
         <p className="about-subtitle">A little corner of joy — where imagination meets handmade charm ♡</p>
       </section>
 
@@ -45,6 +45,7 @@ export default function About() {
       {/* How We Create */}
       <section className="about-section create-section">
         <h2 className="about-section-title">How We Create</h2>
+        <p className="create-intro">Every piece goes through a slow, loving process:</p>
         <div className="create-steps-row">
           <div className="create-step">
             <span className="step-icon">✿</span>

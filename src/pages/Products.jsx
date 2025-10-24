@@ -6,25 +6,36 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// Import from assets folder
+import tinBox1 from '../assets/tin-box-1.JPG';
+import tinBox2 from '../assets/tin-box-2.JPG';
+import tinBox3 from '../assets/tin-box-3.JPG';
+import tinBox4 from '../assets/tin-box-4.JPG';
+import pencilCase1 from '../assets/pencil-case-1.JPG';
+import pencilCase2 from '../assets/pencil-case-2.JPG';
+import notebook1 from '../assets/notebook-1.JPG';
+import notebook2 from '../assets/notebook-2.JPG';
+import notebook3 from '../assets/notebook-3.JPG';
+
 export default function Products() {
   const products = [
     {
       name: 'Decorated Tin Box',
       price: '$8-12',
       description: 'Customizable tin boxes decorated with your choice of cute stickers',
-      images: ['/tin-box-1.jpg', '/tin-box-2.jpg', '/tin-box-3.jpg', '/tin-box-4.jpg']
+      images: [tinBox1, tinBox2, tinBox3, tinBox4]
     },
     {
       name: 'Muji Pencil Case',
       price: '$12-15',
       description: 'Personalized Muji pencil cases with kawaii decoration',
-      images: ['/pencil-case-1.jpg', '/pencil-case-2.jpg']
+      images: [pencilCase1, pencilCase2]
     },
     {
       name: 'Muji Notebook',
       price: '$12-15',
       description: 'Custom decorated Muji notebooks perfect for journaling',
-      images: ['/notebook-1.jpg', '/notebook-2.jpg', '/notebook-3.jpg']
+      images: [notebook1, notebook2, notebook3]
     }
   ];
 
@@ -84,7 +95,6 @@ export default function Products() {
           </div>
         </div>
         
-        {/* Order Now Button */}
         <div style={{textAlign: 'center', marginTop: '2rem'}}>
           <Link to="/order" className="btn-order-now">Order Now</Link>
         </div>

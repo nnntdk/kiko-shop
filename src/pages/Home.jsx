@@ -1,19 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '/logo.jpg';
+
+// Import product images from assets
+import tinBox1 from '../assets/tin-box-1.JPG';
+import pencilCase1 from '../assets/pencil-case-1.JPG';
+import notebook1 from '../assets/notebook-1.JPG';
 
 export default function Home() {
   const featuredProducts = [
-    { name: 'Decorated Tin Box', image: '/tin-box-1.jpg'},
-    { name: 'Muji Pencil Case', image: '/pencil-case-1.jpg'},
-    { name: 'Muji Notebook', image: '/notebook-1.jpg' }
+    { name: 'Decorated Tin Box', image: tinBox1, emoji: '🎁' },
+    { name: 'Muji Pencil Case', image: pencilCase1, emoji: '✏️' },
+    { name: 'Muji Notebook', image: notebook1, emoji: '📓' }
   ];
 
   return (
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-main">
-        <img src={logo} alt="Kiko's Studio" className="hero-main-logo" />
+        <img src="/logo.jpg" alt="Kiko's Studio" className="hero-main-logo" />
         <h1 className="hero-main-title">Kiko's Studio</h1>
         <p className="hero-tagline">handmade with love, sealed with shine ♡</p>
         <p className="hero-subtitle">✿ Customised goods, made just for you ✿</p>
@@ -35,7 +39,7 @@ export default function Home() {
 
       {/* Featured Products */}
       <section className="featured-section">
-        <h2 className="featured-title">Some of Our Bestsellers</h2>
+        <h2 className="featured-title">✨ Some of Our Bestsellers ✨</h2>
         <div className="featured-grid">
           {featuredProducts.map((product, index) => (
             <div key={index} className="featured-item">
@@ -68,13 +72,13 @@ export default function Home() {
           </div>
           <div className="how-step">
             <div className="step-circle">3</div>
-            <p>Pay for your order and wait for your handmade piece to arrive!</p>
+            <p>Pay for your order and wait for your handmade piece to arrive! ✿</p>
           </div>
         </div>
         <Link to="/order" className="btn-order-now">Start Your Order</Link>
       </section>
 
-{/* Follow & Join Us */}
+      {/* Follow & Join Us */}
       <section className="follow-section">
         <h2 className="follow-title">Stay Connected ✧</h2>
         <p className="follow-text">
@@ -84,7 +88,7 @@ export default function Home() {
           <a href="https://instagram.com/kiko.sstudio" target="_blank" rel="noopener noreferrer" className="social-link">
             📸 @kiko.sstudio
           </a>
-          <a href="https://www.tiktok.com/@kiko.sstudio?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="social-link">
+          <a href="https://www.tiktok.com/@kiko.sstudio" target="_blank" rel="noopener noreferrer" className="social-link">
             🎵 TikTok
           </a>
           <a href="https://t.me/kikosstudio" target="_blank" rel="noopener noreferrer" className="social-link">
