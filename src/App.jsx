@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Heart, Instagram } from 'lucide-react';
-import Home from './pages/Home';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Instagram } from 'lucide-react';
 import About from './pages/About';
 import Products from './pages/Products';
 import OrderForm from './pages/OrderForm';
 import './Shop.css';
+
+// Import product images
+import tinBox1 from './assets/tin-box-1.JPG';
+import pencilCase1 from './assets/pencil-case-1.JPG';
+import notebook1 from './assets/notebook-1.JPG';
 
 // ScrollToTop component
 function ScrollToTop() {
@@ -18,12 +22,101 @@ function ScrollToTop() {
   return null;
 }
 
+// Home component inline
+function Home() {
+  const featuredProducts = [
+    { name: 'Decorated Tin Box', image: tinBox1, emoji: '🎁' },
+    { name: 'Muji Pencil Case', image: pencilCase1, emoji: '✏️' },
+    { name: 'Muji Notebook', image: notebook1, emoji: '📓' }
+  ];
+
+  return (
+    <div className="home-page">
+      <section className="hero-main">
+        <img src="logo.jpg" alt="Kiko's Studio" className="hero-main-logo" />
+        <h1 className="hero-main-title">Kiko's Studio</h1>
+        <p className="hero-tagline">handmade with love, sealed with shine ♡</p>
+        <p className="hero-subtitle">✿ Customised goods, made just for you ✿</p>
+        <div className="hero-buttons">
+          <Link to="/products" className="btn-hero-main">Shop Now</Link>
+          <Link to="/order" className="btn-hero-secondary">Order Form</Link>
+        </div>
+      </section>
+
+      <section className="intro-section">
+        <p className="intro-text">
+          Welcome to <strong>Kiko's Studio</strong>, a tiny corner of happiness where we turn everyday items into something special ✧
+        </p>
+        <p className="intro-text">
+          Each piece is hand-decorated and sealed with care using Mod Podge, so your items stay cute and glossy for a long, long time ♡
+        </p>
+      </section>
+
+      <section className="featured-section">
+        <h2 className="featured-title">✨ Some of Our Bestsellers ✨</h2>
+        <div className="featured-grid">
+          {featuredProducts.map((product, index) => (
+            <div key={index} className="featured-item">
+              <div className="featured-image-container">
+                <img src={product.image} alt={product.name} className="featured-image" />
+              </div>
+              <p className="featured-label">{product.emoji} {product.name}</p>
+            </div>
+          ))}
+        </div>
+        <Link to="/products" className="see-all-link">See all products →</Link>
+      </section>
+
+      <section className="how-order-section">
+        <h2 className="how-order-title">♡ How to Order ♡</h2>
+        <div className="how-order-steps">
+          <div className="how-step">
+            <div className="step-circle">1</div>
+            <p>Fill up the order form below with your details</p>
+          </div>
+          <div className="how-step">
+            <div className="step-circle">2</div>
+            <p>
+              Drop us a DM on Instagram{' '}
+              <a href="https://instagram.com/kiko.sstudio" target="_blank" rel="noopener noreferrer" className="instagram-inline-link">
+                @kiko.sstudio
+              </a>
+            </p>
+          </div>
+          <div className="how-step">
+            <div className="step-circle">3</div>
+            <p>Pay for your order and wait for your handmade piece to arrive! ✿</p>
+          </div>
+        </div>
+        <Link to="/order" className="btn-order-now">Start Your Order</Link>
+      </section>
+
+      <section className="follow-section">
+        <h2 className="follow-title">Stay Connected ✧</h2>
+        <p className="follow-text">
+          Follow us on Instagram and TikTok for behind-the-scenes peeks, new drops, and exclusive deals!
+        </p>
+        <div className="social-links">
+          <a href="https://instagram.com/kiko.sstudio" target="_blank" rel="noopener noreferrer" className="social-link">
+            📸 @kiko.sstudio
+          </a>
+          <a href="https://www.tiktok.com/@kiko.sstudio" target="_blank" rel="noopener noreferrer" className="social-link">
+            🎵 TikTok
+          </a>
+          <a href="https://t.me/kikosstudio" target="_blank" rel="noopener noreferrer" className="social-link">
+            💬 Telegram Channel →
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
       <div className="shop-container">
-        {/* Sticky Navigation */}
         <nav className="sticky-nav">
           <Link to="/" className="nav-logo">Kiko's Studio</Link>
           <div className="nav-links">
@@ -33,7 +126,6 @@ export default function App() {
           </div>
         </nav>
 
-        {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -41,7 +133,6 @@ export default function App() {
           <Route path="/order" element={<OrderForm />} />
         </Routes>
 
-        {/* Footer */}
         <footer className="modern-footer">
           <p>© 2025 Kiko's Studio — Handmade with Love ♡</p>
           <a href="https://instagram.com/kiko.sstudio" target="_blank" rel="noopener noreferrer" className="footer-link">

@@ -41,7 +41,7 @@ export default function Products() {
 
   return (
     <section className="products-section">
-      <h2 className="section-heading">Our Products 🎁</h2>
+      <h2 className="section-heading">Our Products</h2>
       <div className="products-grid">
         {products.map(product => (
           <div key={product.name} className="product-card-modern">
