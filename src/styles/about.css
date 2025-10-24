@@ -1,0 +1,164 @@
+/* ===== ABOUT PAGE STYLES ===== */
+
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Section */
+.about-header {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #F5EFE7 0%, #E8DDD0 100%);
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
+
+.about-title {
+  font-size: 3rem;
+  color: #6B5D4F;
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.3rem;
+  color: #8B7A6A;
+  font-style: italic;
+}
+
+/* About Sections */
+.about-section {
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.promise-section {
+  background-color: #FAF8F5;
+  border-radius: 16px;
+}
+
+.create-section {
+  background-color: #E8DDD0;
+  border-radius: 16px;
+}
+
+.community-section {
+  background: linear-gradient(135deg, #D4E4F0 0%, #C4D4E0 100%);
+  border-radius: 16px;
+}
+
+.about-section-title {
+  font-size: 2rem;
+  color: #6B5D4F;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #6B5D4F;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* How We Create Steps */
+.create-intro {
+  font-size: 1.1rem;
+  color: #6B5D4F;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.create-steps-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-bottom: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.create-step {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.create-step p {
+  font-size: 0.95rem;
+  color: #6B5D4F;
+  line-height: 1.6;
+}
+
+/* Community Links */
+.community-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+/* Community Links - Darker colors */
+.community-link {
+  font-size: 1.1rem;
+  color: #8B6F47;  /* Changed from #D4A574 to darker brown */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.community-link:hover {
+  color: #6B5D4F;  /* Changed from #B8936E to even darker */
+  text-decoration: underline;
+}
+
+
+/* Closing Section */
+.about-closing {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #FFF9F0 0%, #F5EFE7 100%);
+  border-radius: 16px;
+  margin-top: 3rem;
+}
+
+.closing-text {
+  font-size: 1.3rem;
+  color: #6B5D4F;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .create-steps-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .create-steps-row {
+    grid-template-columns: 1fr;
+  }
+}

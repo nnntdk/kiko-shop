@@ -1,0 +1,112 @@
+/* ===== IMPORTS & FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.02em;
+  background-color: #F5EFE7;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Caprasimo', cursive;
+  letter-spacing: 0.05em;
+}
+
+/* ===== LAYOUT ===== */
+.shop-container {
+  min-height: 100vh;
+  background-color: #F5EFE7;
+  padding-top: 80px;
+}
+
+.shop-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+/* ===== SECTION HEADERS ===== */
+.shop-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.shop-title {
+  color: #A68B6A;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.shop-subtitle {
+  font-size: 1.25rem;
+  color: #A67C52;
+}
+
+.section-title,
+.section-heading {
+  color: #A68B6A;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+.section-heading-white {
+  color: #F5D98D;
+  font-size: 2.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ===== FOOTER ===== */
+.shop-footer,
+.modern-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  color: #8B6F47;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-link,
+.instagram-link {
+  color: #D4A574;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-link:hover,
+.instagram-link:hover {
+  text-decoration: underline;
+}
+
+.inline-icon {
+  display: inline;
+  vertical-align: middle;
+}

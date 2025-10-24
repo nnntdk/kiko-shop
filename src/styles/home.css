@@ -1,0 +1,240 @@
+/* ===== HOME PAGE STYLES ===== */
+
+/* Hero Main Section */
+.hero-main {
+  background: linear-gradient(135deg, #F5EFE7 0%, #E8DDD0 100%);
+  text-align: center;
+  padding: 5rem 2rem;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;  /* Changed from 50% (circle) to 16px (rounded square) */
+  margin-bottom: 1.5rem;
+  border: 4px solid #D4A574;
+  object-fit: cover;
+}
+
+
+.hero-main-title {
+  font-size: 4rem;
+  color: #6B5D4F;
+  margin-bottom: 1rem;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  color: #A68B6A;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #8B7A6A;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #6B5D4F;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Featured Products */
+.featured-section {
+  padding: 4rem 2rem;
+  background-color: #FAF8F5;
+  text-align: center;
+}
+
+.featured-title {
+  font-size: 2.5rem;
+  color: #6B5D4F;
+  margin-bottom: 3rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
+.featured-item {
+  text-align: center;
+}
+
+.featured-image-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.featured-image:hover {
+  transform: scale(1.05);
+}
+
+.featured-label {
+  font-size: 1.1rem;
+  color: #6B5D4F;
+  font-weight: 600;
+}
+
+.see-all-link {
+  display: inline-block;
+  color: #D4A574;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.see-all-link:hover {
+  text-decoration: underline;
+}
+
+/* How to Order */
+.how-order-section {
+  padding: 4rem 2rem;
+  background-color: #E8DDD0;
+  text-align: center;
+}
+
+.how-order-title {
+  font-size: 2.5rem;
+  color: #6B5D4F;
+  margin-bottom: 3rem;
+}
+
+.how-order-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
+.how-step {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.step-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #D4A574;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.how-step p {
+  color: #6B5D4F;
+  line-height: 1.6;
+}
+
+.instagram-inline-link {
+  color: #D4A574;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.instagram-inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Follow Section */
+.follow-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #D4E4F0 0%, #C4D4E0 100%);
+  text-align: center;
+}
+
+.follow-title {
+  font-size: 2.5rem;
+  color: #6B5D4F;
+  margin-bottom: 1rem;
+}
+
+.follow-text {
+  font-size: 1.1rem;
+  color: #6B5D4F;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Social Links - Darker colors */
+.social-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  font-size: 1.2rem;
+  color: #8B6F47;  /* Changed from #D4A574 to darker brown */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #6B5D4F;  /* Changed from #B8936E to even darker */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .featured-grid,
+  .how-order-steps {
+    grid-template-columns: 1fr;
+  }
+}
