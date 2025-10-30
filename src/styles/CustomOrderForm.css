@@ -1,0 +1,303 @@
+.custom-order-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5d4037;
+  margin-bottom: 0.5rem;
+}
+
+
+.form-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+    
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5d4037;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #6b4423;
+  box-shadow: 0 0 0 3px rgba(107, 68, 35, 0.1);
+}
+
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-left: 0;
+}
+
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: #374151;
+  justify-content: flex-start;
+}
+
+.required-asterisk {
+  color: #dc2626;
+  margin-left: 0.25rem;
+  font-weight: bold;
+}
+
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #6b4423;
+  flex-shrink: 0;
+}
+
+
+.submit-btn {
+  width: 100%;
+  background: #6b4423;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+
+.submit-btn:hover {
+  background: #5d3a1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 68, 35, 0.3);
+}
+
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+
+.section-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:  #a1826d;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.custom-order-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 100px auto 2rem auto;
+  padding: 0 1rem;
+}
+
+.order-summary {
+  width: 300px;
+  background: #f9f7f4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+.custom-order-form {
+  flex: 1;
+  min-width: 0;
+}
+
+
+.summary-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5d4037;
+  margin: 0 0 1.5rem 0;
+}
+
+.summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.item-name {
+  font-weight: 500;
+}
+
+.item-price {
+  color: #6b4423;
+  font-weight: 600;
+}
+
+.summary-divider {
+  height: 1px;
+  background: #d4ccc4;
+  margin: 1rem 0;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.total-label {
+  font-weight: 600;
+  color: #5d4037;
+  font-size: 1rem;
+}
+
+.total-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #6b4423;
+}
+
+.price-note {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 1rem 0 0 0;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.price-range {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #a1826d;
+}
+
+
+.empty-summary {
+  color: #9ca3af;
+  text-align: center;
+  font-size: 0.95rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 900px) {
+  .custom-order-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .order-summary {
+    width: 100%;
+    position: static;
+  }
+}
+
+.summary-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.summary-breakdown .summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.intl-note,
+.meetup-note {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-weight: normal;
+}
+
+
+
+@media (max-width: 640px) {
+  .custom-order-form {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+}
